@@ -5,7 +5,7 @@
 #define MyAppExeName "Wincash.exe"
 #define MyAppIcoName "Wincash_Icon.ico"
 #define MyAppVersion "10.3.2038.11"
-#define MyAppVerName "Gsoft Wincash 10.3.2038.11"
+#define MyAppVerName "Gsoft Wincash Terminal 10.3.2038.11"
 
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application. Do not use the same AppId value in installers for other applications.
@@ -37,9 +37,9 @@ Name: "brazilianportuguese"; MessagesFile: "compiler:Languages\BrazilianPortugue
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"
 
 [Files]
-Source: "..\Wincash_Terminal\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
-Source: "..\Wincash_Terminal\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
-Source: "..\files\Atualizador\*"; DestDir: "C:\GSOFT\Atualizador"; Flags: ignoreversion
+Source: "..\Modelo_Wincash_Terminal\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\Modelo_Wincash_Terminal\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "..\Files\Atualizador\*"; DestDir: "C:\GSOFT\Atualizador"; Flags: ignoreversion
 
 [Icons]
 Name: "{autoprograms}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"
