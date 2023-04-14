@@ -3,7 +3,6 @@
 #define MyAppPublisher "Gsoft do Brasil Sistemas"
 #define MyAppURL "https://www.gsoft.com.br/"
 #define MyAppExeName "Wincash.exe"
-#define MyAppIcoName "Wincash_Icon.ico"
 #define MyAppVersion "10.3.2038.11"
 #define MyAppVerName "Gsoft Wincash Terminal 10.3.2038.11"
 
@@ -19,13 +18,13 @@ AppPublisher={#MyAppPublisher}
 AppPublisherURL={#MyAppURL}
 AppSupportURL={#MyAppURL}
 AppUpdatesURL={#MyAppURL}
-DefaultDirName=C:\GSOFT\Wincash
+DefaultDirName=C:\GSOFT
 DisableDirPage=yes
 DisableProgramGroupPage=yes
 LicenseFile=Gsoft do Brasil Sistemas.rtf
 SetupIconFile=Instalador.ico
 OutputDir=..\Release
-OutputBaseFilename="Wincash-Terminal"
+OutputBaseFilename="Wincash_NFeTop-Terminal"
 Compression=lzma2
 SolidCompression=yes
 WizardStyle=modern  
@@ -33,16 +32,24 @@ WizardStyle=modern
 [Languages]
 Name: "brazilianportuguese"; MessagesFile: "compiler:Languages\BrazilianPortuguese.isl"
 
+[Components]
+Name: Wincash; Description: "Gsoft Wincash"; types: full
+Name: NFeTop; Description: "Gsoft NFeTop"; Types: full
+
 [Tasks]
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"
 
 [Files]
-Source: "..\Modelo_Wincash_Terminal\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "..\Modelo_Wincash_Terminal\*"; DestDir: "{app}\Wincash"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Wincash
 Source: "..\Files\Atualizador\*"; DestDir: "C:\GSOFT\Atualizador"; Flags: ignoreversion
+Source: "..\Modelo_NFeTop\*"; DestDir: "{app}\NFeTop"; Flags: ignoreversion; Components: NFeTop
 
 [Icons]
-Name: "{autoprograms}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"
-Name: "{userdesktop}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"
+Name: "{autoprograms}\{#MyAppName}"; Filename: "{app}\Wincash\{#MyAppExeName}"; Components: Wincash
+Name: "{userdesktop}\{#MyAppName}"; Filename: "{app}\Wincash\{#MyAppExeName}"; Components: Wincash
+Name: "{autoprograms}\Gsoft NFeTop"; Filename: "{app}\NFeTop\NFeTop.exe"; Components: NFeTop
+Name: "{userdesktop}\Gsoft NFeTop"; Filename: "{app}\NFeTop\NFeTop.exe"; Components: NFeTop 
 
 [Run]
-Filename: "{app}\{#MyAppExeName}"; Description: "{cm:LaunchProgram,{#StringChange("Wincash", '&', '&&')}}"; Flags: nowait postinstall skipifsilent 
+Filename: "{app}\Wincash\{#MyAppExeName}"; Description: "{cm:LaunchProgram,{#StringChange("Wincash", '&', '&&')}}"; Flags: nowait postinstall skipifsilent; Components: Wincash 
+Filename: "{app}\NFeTop\NFeTop.exe"; Description: "{cm:LaunchProgram,{#StringChange("NFeTop", '&', '&&')}}"; Flags: nowait postinstall skipifsilent; Components: NFeTop

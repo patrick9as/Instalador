@@ -37,7 +37,6 @@ Name: "brazilianportuguese"; MessagesFile: "compiler:Languages\BrazilianPortugue
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"
 
 [Files]
-Source: "..\Modelo_Wincash_Servidor\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
 Source: "..\Modelo_Wincash_Servidor\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "..\Files\Atualizador\*"; DestDir: "C:\GSOFT\Atualizador"; Flags: ignoreversion
 Source: "..\Files\SQLEXPRADV_x64_PTB\*"; DestDir: "C:\GSOFT\SQLServer2019\"; Flags: ignoreversion recursesubdirs createallsubdirs
@@ -46,10 +45,11 @@ Source: ".\ValeSafe\*"; DestDir: "C:\GSOFT\Scripts\"; Flags: ignoreversion recur
 Source: "..\Files\GCOM_NEW.bak"; DestDir: "C:\GSOFT\"; Flags: ignoreversion
 
 [Icons]
-Name: "{autoprograms}\{#MyAppName}"; Filename: "{app}\Gsoft {#MyAppExeName}"
+Name: "{autoprograms}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"
+Name: "{userdesktop}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"
 
 [Run]
-Filename: "{app}\{#MyAppExeName}"; Description: "{cm:LaunchProgram,{#StringChange(MyAppName, '&', '&&')}}"; Flags: nowait postinstall skipifsilent
+Filename: "{app}\{#MyAppExeName}"; Description: "{cm:LaunchProgram,{#StringChange("Wincash", '&', '&&')}}"; Flags: nowait postinstall skipifsilent
 Filename: "C:\GSOFT\SQLServer2019\SETUP.exe"; Parameters: "/q /ACTION=Install /INSTANCENAME=GSOFT /FEATURES=SQL /SECURITYMODE=SQL /SAPWD=@Gsbrasil12010590 /SQLSYSADMINACCOUNTS=BUILTIN\Administrators /IACCEPTSQLSERVERLICENSETERMS"; StatusMsg: "Instalando o SQL Server 2019..."; Flags: waituntilterminated
 Filename: "cmd.exe"; Parameters: "/C sc config SQLBrowser start= auto"; WorkingDir: {win}; Flags: runhidden   
 Filename: "cmd.exe"; Parameters: "/C net start SQLBrowser"; WorkingDir: {win}; Flags: runhidden waituntilterminated
