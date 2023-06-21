@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2020/03/30 17:29:44.000.786,=C:\Users\Patrick\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/06/16 16:07:22.000.818,=C:\Users\Patrick\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/11/24 18:49:31.000.846,=C:\Users\Patrick\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/12/08 11:44:12.000.562,=C:\Users\Patrick\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/12/13 12:06:19.000.949,=C:\Users\Patrick\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/02/08 10:33:37.000.188,=C:\Users\Patrick\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/04/04 11:43:14.000.262,=C:\Users\Patrick\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/04/04 11:44:23.000.615,D:\GSOFT\Projetos\Instalador\ufrmPrincipal.pas=C:\Users\Patrick\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/04/04 11:44:23.000.615,D:\GSOFT\Projetos\Instalador\ufrmPrincipal.dfm=C:\Users\Patrick\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2022/04/04 11:44:25.000.098,D:\GSOFT\Projetos\Instalador\Project1.dproj=C:\Users\Patrick\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2022/04/04 11:44:34.000.968,D:\GSOFT\Projetos\Instalador\Instalador.dproj=D:\GSOFT\Projetos\Instalador\Project1.dproj</Transaction>
+    <Transaction>2022/04/04 11:44:57.000.650,=D:\GSOFT\Projetos\Instalador\Unit1.pas</Transaction>
+    <Transaction>2022/04/04 11:45:26.000.621,D:\GSOFT\Projetos\Instalador\udtmPrincipal.dfm=D:\GSOFT\Projetos\Instalador\Unit1.dfm</Transaction>
+    <Transaction>2022/04/04 11:45:26.000.621,D:\GSOFT\Projetos\Instalador\udtmPrincipal.pas=D:\GSOFT\Projetos\Instalador\Unit1.pas</Transaction>
+    <Transaction>2022/04/04 12:32:20.000.286,=D:\GSOFT\Projetos\Instalador\Unit1.pas</Transaction>
+    <Transaction>2022/04/04 12:37:11.000.293,D:\GSOFT\Projetos\Instalador\uListarDiretorio.pas=D:\GSOFT\Projetos\Instalador\Unit1.pas</Transaction>
+    <Transaction>2022/12/07 01:36:38.000.126,=D:\GSOFT\Projetos\Instalador\Unit1.pas</Transaction>
+    <Transaction>2022/12/07 01:37:28.000.273,D:\GSOFT\Projetos\Instalador\uDownload.pas=D:\GSOFT\Projetos\Instalador\Unit1.pas</Transaction>
+    <Transaction>2022/12/07 10:12:11.000.025,=D:\GSOFT\Projetos\Instalador\Unit1.pas</Transaction>
+    <Transaction>2022/12/07 10:12:21.000.201,D:\GSOFT\Projetos\Instalador\Unit1.pas=D:\GSOFT\Projetos\Instalador\ufrmConfig.pas</Transaction>
+    <Transaction>2022/12/07 10:12:21.000.201,D:\GSOFT\Projetos\Instalador\Unit1.dfm=D:\GSOFT\Projetos\Instalador\ufrmConfig.dfm</Transaction>
+    <Transaction>2022/12/07 10:13:58.000.179,D:\GSOFT\Projetos\Instalador\ufrmConfig.pas=</Transaction>
+    <Transaction>2022/12/12 17:27:56.000.893,D:\GSOFT\Projetos\CheckDb\Instalador.dproj=D:\GSOFT\Projetos\CheckDb\CheckDb.dproj</Transaction>
+    <Transaction>2022/12/15 09:51:05.000.628,=D:\GSOFT\Projetos\Git\Utilitarios\Instalador\CheckDb\Unit1.pas</Transaction>
+    <Transaction>2022/12/15 09:51:48.000.297,D:\GSOFT\Projetos\Git\Utilitarios\Instalador\CheckDb\Unit1.pas=D:\GSOFT\Projetos\Git\Utilitarios\Instalador\CheckDb\uScripts.pas</Transaction>
+    <Transaction>2022/12/15 09:52:29.000.764,D:\GSOFT\Projetos\Git\Utilitarios\Instalador\CheckDb\uScripts.pas=</Transaction>
+    <Transaction>2022/12/15 09:55:04.000.721,D:\GSOFT\Projetos\Git\Utilitarios\Instalador\CheckDb\uDownload.pas=</Transaction>
+  </Transactions>
+	<ActiveMobileDevice>
+		<NoProfile iOSSimulator="iPhone5"/>
+	</ActiveMobileDevice>
+</BorlandProject>

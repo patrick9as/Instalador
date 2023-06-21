@@ -1,0 +1,17 @@
+program Instalador;
+
+uses
+  Vcl.Forms,
+  ufrmPrincipal in 'ufrmPrincipal.pas' {frmPrincipal},
+  udtmPrincipal in 'udtmPrincipal.pas' {dtmPrincipal: TDataModule},
+  uListarDiretorio in 'uListarDiretorio.pas';
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TfrmPrincipal, frmPrincipal);
+  Application.CreateForm(TdtmPrincipal, dtmPrincipal);
+  Application.Run;
+end.

@@ -1,0 +1,23 @@
+program Instalador;
+
+uses
+  Vcl.Forms,
+  ufrmPrincipal in 'ufrmPrincipal.pas' {frmPrincipal},
+  udtmPrincipal in 'udtmPrincipal.pas' {dtmPrincipal: TDataModule},
+  uListarDiretorio in 'uListarDiretorio.pas',
+  Vcl.Themes,
+  Vcl.Styles,
+  uDownload in 'uDownload.pas',
+  ufrmConfig in 'ufrmConfig.pas' {Form1};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  TStyleManager.TrySetStyle('Tablet Light');
+  Application.CreateForm(TdtmPrincipal, dtmPrincipal);
+  Application.CreateForm(TfrmPrincipal, frmPrincipal);
+  Application.CreateForm(TForm1, Form1);
+  Application.Run;
+end.

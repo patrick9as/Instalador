@@ -1,0 +1,45 @@
+unit uListarDiretorio;
+
+interface
+
+uses
+  System.SysUtils, System.Classes;
+
+implementation
+
+type TListarDiretorio = class
+  private
+  public
+  function Lista(Path: string): TStrings;
+end;
+
+{ ListarDiretorio }
+
+
+{ ListarDiretorio }
+
+function TListarDiretorio.Lista(Path: string): TStringList;
+var
+  SR: TSearchRec;
+  Lista: TStringList;
+begin
+
+  Lista := TStringList.Create();
+
+  if FindFirst(Path + '*.*', faAnyFile, SR) = 0 then
+  begin
+
+    repeat
+      if (SR.Attr <> faDirectory) then
+        Lista.Add(SR.Name);
+
+    until FindNext(SR) <> 0;
+
+    FindClose(SR);
+
+    end;
+  end;
+
+  result := Lista;
+
+end.

@@ -1,0 +1,46 @@
+unit udtmPrincipal;
+
+interface
+
+uses
+  System.SysUtils, System.Classes, Data.DB, MemDS, DBAccess, Uni, UniProvider,
+  SQLServerUniProvider, DASQLMonitor, UniSQLMonitor, DAScript, UniScript;
+
+type
+  TdtmPrincipal = class(TDataModule)
+    UniConnection: TUniConnection;
+    SQLServerUniProvider: TSQLServerUniProvider;
+    qryCreateDataBase: TUniQuery;
+    qryVersion: TUniQuery;
+    UniSQLMonitor: TUniSQLMonitor;
+    qrySQL: TUniQuery;
+    qryScript: TUniScript;
+    qryScript3: TUniSQL;
+    procedure qryScriptError(Sender: TObject; E: Exception; SQL: string;
+      var Action: TErrorAction);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  dtmPrincipal: TdtmPrincipal;
+
+implementation
+
+{%CLASSGROUP 'Vcl.Controls.TControl'}
+
+{$R *.dfm}
+
+procedure TdtmPrincipal.qryScriptError(Sender: TObject; E: Exception;
+  SQL: string; var Action: TErrorAction);
+begin
+  try
+
+  except
+
+  end;
+end;
+
+end.

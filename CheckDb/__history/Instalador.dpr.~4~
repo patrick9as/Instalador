@@ -1,0 +1,20 @@
+program Instalador;
+
+uses
+  Vcl.Forms,
+  ufrmPrincipal in 'ufrmPrincipal.pas' {frmPrincipal},
+  udtmPrincipal in 'udtmPrincipal.pas' {dtmPrincipal: TDataModule},
+  uListarDiretorio in 'uListarDiretorio.pas',
+  Vcl.Themes,
+  Vcl.Styles;
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  TStyleManager.TrySetStyle('Windows10 Blue');
+  Application.CreateForm(TfrmPrincipal, frmPrincipal);
+  Application.CreateForm(TdtmPrincipal, dtmPrincipal);
+  Application.Run;
+end.

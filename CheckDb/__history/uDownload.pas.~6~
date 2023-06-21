@@ -1,0 +1,10 @@
+unit uDownload;
+
+interface
+
+uses
+  Wininet, ShellApi, System.Types;
+
+implementation
+
+end;
