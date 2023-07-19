@@ -1,0 +1,9 @@
+
+--------------------------------------------------------------------------------
+ATIVAR - 25/12/20 21:14:07:961 - Modelo: Generica - Porta: COM1         Device: BAUD=9600 DATA=8 PARITY=N STOP=1 HANDSHAKE= MAXBANDWIDTH=0 SENDBYTESCOUNT=0 SENDBYTESINTERVAL=0
+--------------------------------------------------------------------------------
+
+ - 21:14:08:475 TX -> [ENQ]
+              UltimoPesoLido: -9 - Resposta: 
+ - 21:14:10:516 TX -> [ENQ]
+              UltimoPesoLido: -9 - Resposta: 

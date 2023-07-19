@@ -3,8 +3,8 @@
 #define MyAppPublisher "Gsoft do Brasil Sistemas"
 #define MyAppURL "https://www.gsoft.com.br/"
 #define MyAppExeName "Wincash.exe"
-#define MyAppVersion "10.3.2038.11"
-#define MyAppVerName "Gsoft Wincash Terminal 10.3.2038.11"
+#define MyAppVersion "10.3.2040.4"
+#define MyAppVerName "Gsoft Wincash Terminal 10.3.2040.4"
 
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application. Do not use the same AppId value in installers for other applications.
@@ -40,9 +40,9 @@ Name: NFeTop; Description: "Gsoft NFeTop"; Types: full
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"
 
 [Files]
-Source: "..\Modelo_Wincash_Terminal\*"; DestDir: "{app}\Wincash"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Wincash
-Source: "..\Files\Atualizador\*"; DestDir: "C:\GSOFT\Atualizador"; Flags: ignoreversion
-Source: "..\Modelo_NFeTop\*"; DestDir: "{app}\NFeTop"; Flags: ignoreversion; Components: NFeTop
+Source: ".\Dependencias\Modelo_Wincash_Terminal\*"; DestDir: "{app}\Wincash"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Wincash
+Source: ".\Dependencias\Atualizador\*"; DestDir: "C:\GSOFT\Atualizador"; Flags: ignoreversion
+Source: ".\Dependencias\Modelo_NFeTop\*"; DestDir: "{app}\NFeTop"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: NFeTop
 
 [Icons]
 Name: "{autoprograms}\{#MyAppName}"; Filename: "{app}\Wincash\{#MyAppExeName}"; Components: Wincash

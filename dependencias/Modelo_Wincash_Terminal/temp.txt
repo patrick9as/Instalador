@@ -1,0 +1,68 @@
+declare @codCliente int
+declare @valorVenda float
+declare @CodVenda int
+
+select @codCliente = 4
+select @valorVenda = 12.07
+select @CodVenda = 1401
+
+declare @bloqLimite char(3)
+declare @bloqAtraso char(3)
+declare @limite float
+declare @atraso int
+declare @carencia int
+declare @valorPendente float
+declare @atrasado char(3)
+declare @alemDoLimite char(3)
+declare @Bloqueado char(3)
+declare @ATIVO char(3)
+
+select 	@bloqLimite = bloqLimite,
+	@bloqAtraso = bloqAtraso,
+	@limite = ISNULL(limite,0),
+	@ATIVO = Ativo
+from mc_clientes where codigo = @codCliente
+
+
+select top 1 @carencia = ISNULL(juros_carencia,0) from mc_config
+select @valorPendente = ISNULL(SUM(valor),0),
+	@atraso = convert(int, getDate() - ISNULL(min(vencimento),GETDATE()))
+from mc_titulos 
+where situacao = 'PEN' AND CODFORMAPAGTO IN (2,21,22,23,24,25,26,27,28,29) AND CODCLIENTE = @codCliente AND CodVenda <> @CodVenda
+select @valorPendente = @valorPendente + @valorVenda
+
+
+if @bloqLimite = 'SIM' and (@limite - @valorPendente) <= 0 
+  select @alemDoLimite = 'SIM'
+ELSE
+  select @alemDoLimite = 'NAO'
+
+
+if @bloqAtraso = 'SIM' and (@atraso - @carencia) > 0 
+  select @atrasado = 'SIM'
+ELSE
+  select @atrasado = 'NAO'
+
+IF (@ALEMDOLIMITE = 'SIM') OR  (@atrasado = 'SIM') 
+  SELECT @BLOQUEADO = 'SIM' 
+ELSE
+  SELECT @BLOQUEADO = 'NAO'
+
+
+IF (@BLOQUEADO = 'NAO' )
+BEGIN
+IF (@ATIVO = 'SIM')
+  SELECT @BLOQUEADO = 'NAO'
+ELSE 
+  SELECT @BLOQUEADO = 'SIM'
+END
+
+
+SELECT 	@codCliente AS CODCLIENTE, 
+	(@limite - @valorPendente) AS LIMITE_DISPONIVEL, 
+	@valorPendente AS TOTAL_DEBITO, 
+	@limite AS LIMITE, 
+	@atraso AS ATRASO, 
+	@alemDoLimite AS ALEMDOLIMITE, @atrasado AS ATRASADO, @BLOQUEADO AS BLOQUEADO
+
+

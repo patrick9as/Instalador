@@ -1,0 +1,1 @@
+Provider Name=SQL Server;Data Source=.\GSOFT;Initial Catalog=GCOM;User ID=sa;Password=@Gsbrasil12010590;Login Prompt=False;Pooling=True;Connection LifeTime=9999;Max Pool Size=9999;Min Pool Size=2000

@@ -1,0 +1,1 @@
+Provider Name=SQL Server;Provider=SQLOLEDB.1;Data Source=.\SQL2019;Initial Catalog=GCOM_MB_PLASTIC;User ID=sa;Password=Gsbrasil;Login Prompt=False;Pooling=True;Connection LifeTime=9999;Max Pool Size=9999;Min Pool Size=2000

@@ -1,0 +1,1 @@
+Provider Name=SQL Server;Provider=SQLOLEDB.1;Data Source=servidor\SQL2019,1439;Initial Catalog=GCOM_DIAS;User ID=sa;Password=@Gsoft12010590;Login Prompt=False
