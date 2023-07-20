@@ -1,0 +1,1 @@
+Provider Name=SQL Server;Provider=SQLOLEDB.1;Data Source=.\GSOFT;Initial Catalog=GCOM;User ID=sa;Password=@Gsbrasil12010590;Login Prompt=False

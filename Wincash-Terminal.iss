@@ -4,8 +4,8 @@
 #define MyAppURL "https://www.gsoft.com.br/"
 #define MyAppExeName "Wincash.exe"
 #define MyAppIcoName "Wincash_Icon.ico"
-#define MyAppVersion "10.3.2038.11"
-#define MyAppVerName "Gsoft Wincash Terminal 10.3.2038.11"
+#define MyAppVersion "10.3.2040.4"
+#define MyAppVerName "Gsoft Wincash Terminal 10.3.2040.4"
 
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application. Do not use the same AppId value in installers for other applications.
@@ -19,7 +19,7 @@ AppPublisher={#MyAppPublisher}
 AppPublisherURL={#MyAppURL}
 AppSupportURL={#MyAppURL}
 AppUpdatesURL={#MyAppURL}
-DefaultDirName=C:\GSOFT\Wincash
+DefaultDirName=C:\GSOFT\
 DisableDirPage=yes
 DisableProgramGroupPage=yes
 LicenseFile=Gsoft do Brasil Sistemas.rtf
@@ -37,12 +37,12 @@ Name: "brazilianportuguese"; MessagesFile: "compiler:Languages\BrazilianPortugue
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"
 
 [Files]
-Source: "..\Modelo_Wincash_Terminal\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
-Source: "..\Files\Atualizador\*"; DestDir: "C:\GSOFT\Atualizador"; Flags: ignoreversion
+Source: ".\Dependencias\Modelo_Wincash_Terminal\*"; DestDir: "{app}\Wincash"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: ".\Dependencias\Atualizador\*"; DestDir: "{app}\Atualizador"; Flags: ignoreversion
 
 [Icons]
 Name: "{autoprograms}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"
 Name: "{userdesktop}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"
 
 [Run]
-Filename: "{app}\{#MyAppExeName}"; Description: "{cm:LaunchProgram,{#StringChange("Wincash", '&', '&&')}}"; Flags: nowait postinstall skipifsilent 
+Filename: "{app}\Wincash\{#MyAppExeName}"; Description: "{cm:LaunchProgram,{#StringChange("Wincash", '&', '&&')}}"; Flags: nowait postinstall skipifsilent 

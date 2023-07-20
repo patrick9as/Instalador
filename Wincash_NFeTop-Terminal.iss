@@ -41,7 +41,7 @@ Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{
 
 [Files]
 Source: ".\Dependencias\Modelo_Wincash_Terminal\*"; DestDir: "{app}\Wincash"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Wincash
-Source: ".\Dependencias\Atualizador\*"; DestDir: "C:\GSOFT\Atualizador"; Flags: ignoreversion
+Source: ".\Dependencias\Atualizador\*"; DestDir: "{app}\Atualizador"; Flags: ignoreversion
 Source: ".\Dependencias\Modelo_NFeTop\*"; DestDir: "{app}\NFeTop"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: NFeTop
 
 [Icons]
